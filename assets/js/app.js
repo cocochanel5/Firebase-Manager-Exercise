@@ -51,5 +51,23 @@ $(document).ready(function () {
 
     });
 
+    database.ref().on("child_added", function(snapshot) {
+        // storing the snapshot.val() in a variable for convenience
+        var sv = snapshot.val();
+        // Console.loging the last user's data
+        console.log(sv.employeeName);
+        console.log(sv.role);
+        console.log(sv.startDate);
+        console.log(sv.monthlyRate);
+
+        // Change the HTML to reflect
+        $("#n").append(sv.employeeName);
+        $("#r").append(sv.role);
+        $("#sd").append(sv.startDate);
+        $("#mr").append(sv.monthlyRate);
+        // Handle the errors
+      }, function(errorObject) {
+        console.log("Errors handled: " + errorObject.code);
+      });
 
 });
