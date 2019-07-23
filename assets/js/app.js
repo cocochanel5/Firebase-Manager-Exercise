@@ -1,7 +1,6 @@
-<script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-app.js"></script>
 
+$( document ).ready(function() {
 
-<script>
 
 
     var firebaseConfig = {
@@ -25,8 +24,9 @@ var startDate = startDate;
 
 $("#submit").on("click", function(event){
         event.preventDefault();
+
+        alert("test")
     });
     
     
-    
-</script>
+});
