@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-app.js"></script>
 
@@ -25,3 +26,8 @@
 
   
 </script>
+=======
+$("#submit").on("click", function(event){
+	event.preventDefault();
+})
+>>>>>>> b061ec4b4473bc68849d7703c7cefd5c2cf1bc5d
