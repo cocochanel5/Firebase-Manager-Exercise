@@ -46,7 +46,7 @@ $(document).ready(function () {
             role: role,
             startDate: startDate,
             monthlyRate: monthlyRate,
-            //dateAdded: firebase.database.ServerValue.TIMESTAMP
+            dateAdded: firebase.database.ServerValue.TIMESTAMP
         });
 
     });
