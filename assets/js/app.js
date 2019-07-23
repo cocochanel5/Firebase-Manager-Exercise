@@ -28,11 +28,6 @@ $(document).ready(function () {
 
 
 
-
-
-
-
-
     $("#submit").on("click", function (event) {
         event.preventDefault();
 
@@ -51,7 +46,7 @@ $(document).ready(function () {
             role: role,
             startDate: startDate,
             monthlyRate: monthlyRate,
-            dateAdded: firebase.database.ServerValue.TIMESTAMP
+            //dateAdded: firebase.database.ServerValue.TIMESTAMP
         });
 
     });
