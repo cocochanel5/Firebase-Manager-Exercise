@@ -1,41 +1,72 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>
-            TIMESHEET FUCK YEAH!
-        </title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    </head>
-    <body>
-        <div class="container">
-            <div class="jumbotron bg-dark">
-                <h1 class="text-center text-white">
-                    Employee Data Management
-                </h1>
-                <h2 class="text-center text-white">
-                    A Comprehensive Directory of Employee Billable Hours
-                </h2>
-            </div>
 
-            <table class="table">
-                <thread>
-                    <tr>
-                        <th scope="col">Employee Name</th>
-                        <th scope="col">Role</th>
-                        <th scope="col">Start Date</th>
-                        <th scope="col">Months Worked</th>
-                        <th scope="col">Monthly Rate ($)</th>
-                        <th scope="col">Total Billed ($)</th>
-                    </tr>
-                </thread>
-            </table>
+<head>
+    <title>
+        TIMESHEET FUCK YEAH!
+    </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="./assets/js/app.js"></script>
+</head>
 
-            <form>
-                <div class="form-group">
-                    <label for="employeeName">Employee Name</label>
-                    <input type="">
-                </div>
-            </form>
+<body>
+    <div class="container">
+        <div class="jumbotron bg-dark">
+            <h1 class="text-center text-white">
+                Employee Data Management
+            </h1>
+            <h2 class="text-center text-white">
+                A Comprehensive Directory of Employee Billable Hour
+            </h2>
         </div>
-    </body>
+
+        <table class="table">
+            <thread>
+                <tr>
+                    <th scope="col">Employee Name</th>
+                    <th scope="col">Role</th>
+                    <th scope="col">Start Date</th>
+                    <th scope="col">Months Worked</th>
+                    <th scope="col">Monthly Rate ($)</th>
+                    <th scope="col">Total Billed ($)</th>
+                </tr>
+            </thread>
+        </table>
+
+        <form>
+            <div class="form-group">
+                <div class="input-group">
+                    <label for="employeeName">Employee Name</label>
+                    <input type="text" class="form-control" id="employeeName" aria-describedby="basic-addon1">
+                </div>
+                
+                <div class="input-group">
+                    <label for="destination">Role</label>
+                    <input type="text" class="form-control" id="role" aria-describedby="basic-addon1">
+                </div>
+
+                <div class="input-group">
+                    <label for="startDate">Start Date (MM/DD/YYY)</label>
+                    <input type="text" class="form-control" id="startDate" aria-describedby="basic-addon1">
+                </div>
+
+                <div class="input-group">
+
+                    <label for="frequency">Monthly Rate</label>
+                    <input type="text" class="form-control" id="frequency" aria-describedby="basic-addon1">
+                </div>
+
+                <div class="btn-group">
+                    <button type="button" id="submit" class="btn btn-primary btn-lg">Submit</button>
+
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
 </html>
