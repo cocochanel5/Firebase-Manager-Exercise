@@ -31,8 +31,6 @@ $(document).ready(function () {
     $("#submit").on("click", function (event) {
         event.preventDefault();
 
-        alert("test")
-
         employeeName = $("#employeeName").val().trim();
 
         role = $("#role").val().trim();
@@ -60,11 +58,14 @@ $(document).ready(function () {
         console.log(sv.startDate);
         console.log(sv.monthlyRate);
 
+       var addRow = $("<tr>").append($("<td>").text(sv.employeeName), $("<td>").text(sv.role), $("<td>").text(sv.startDate),$("<td>").text(sv.monthlyRate))  
+        
+       $("tbody").append(addRow)
         // Change the HTML to reflect
-        $("#n").append(sv.employeeName);
-        $("#r").append(sv.role);
-        $("#sd").append(sv.startDate);
-        $("#mr").append(sv.monthlyRate);
+      //  $("#n").append(sv.employeeName);
+       // $("#r").append(sv.role);
+        //$("#sd").append(sv.startDate);
+        //$("#mr").append(sv.monthlyRate);
         // Handle the errors
       }, function(errorObject) {
         console.log("Errors handled: " + errorObject.code);
